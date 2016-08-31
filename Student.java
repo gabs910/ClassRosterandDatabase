@@ -93,18 +93,14 @@ public class Student implements Comparable<Student> {
 
 	}
 
-//	public static void main(String[] args) {
-//		Student s = new Student();
-//		s.printClassRoster();
-//		s.compareAndDisplay();
-//		// // s.studentList();
-//		// Collections.sort(classRoster,studentIdComparator );
-//		// System.out.println(classRoster);
-//		//
-//	}
-
-	public void compareAndDisplay() {
-
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.printClassRoster();
+		//s.compareAndDisplay();
+		// // s.studentList();
+		// Collections.sort(classRoster,studentIdComparator );
+		// System.out.println(classRoster);
+		//
 		for (Student student : classRoster) {
 			map.put(student.getId(), student);
 
@@ -126,14 +122,18 @@ public class Student implements Comparable<Student> {
 						map.get(sorted.get(x - 1)).eyeColor, map.get(sorted.get(x - 1)).mothnsEmployed);
 
 			}
-
 		}
+
 	}
 
+//	public void compareAndDisplay() {
+//		
+//			}
+//
 	@Override
 	public int compareTo(Student student) {
 		return this.firstName.compareTo(student.firstName);
 
 	}
 
-};
+}
